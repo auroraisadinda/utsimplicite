@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="#FBF6F6">
+    android:background="#BFC9D1">
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="40dp"
         android:scaleType="centerInside"
-        android:src="@drawable/bakery_logo"
+        android:src="@drawable/kabarkota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
-        android:text="Create Your Account Here"
+        android:text="Create an Account"
         android:textColor="#001524"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#6B7B5E"
+            android:backgroundTint="#1A3263"
             android:text="Register"
             android:textColor="#FFFFFF" />
 

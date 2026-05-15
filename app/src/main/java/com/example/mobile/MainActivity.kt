@@ -18,45 +18,45 @@ class MainActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
 
-        // ✅ Binding setup (cukup ini saja, jangan setContentView dua kali)
+        //Binding setup
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // =========================
-        // 🔹 EXPLICIT INTENT
-        // =========================
 
-        // ➜ Ke Login
+        //EXPLICIT INTENT
+
+
+        //login
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        // ➜ Ke Register
+        //register
         binding.btnRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        // =========================
-        // 🔥 IMPLICIT INTENT
-        // =========================
 
-        // 🌐 Buka Website
+        //IMPLICIT INTENT
+
+
+        //Buka Website
         binding.btnWeb.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://www.google.com")
             startActivity(intent)
         }
 
-        // 📍 Buka Maps (contoh lokasi)
+        //(contoh lokasi)
         binding.btnMaps.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("geo:-6.2,106.8")
             startActivity(intent)
         }
 
-        // 📞 Dial Telepon
+        //Telepon
         binding.btnCall.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:08123456789")

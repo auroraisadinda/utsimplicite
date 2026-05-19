@@ -3,10 +3,15 @@ package com.example.mobile
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +20,42 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+            menuInflater.inflate(R.menu.menu_option, menu)
+
+            return true
+        }
+
+        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+            return when(item.itemId){
+
+                R.id.profile -> {
+                    Toast.makeText(this,
+                        "Profile Click",
+                        Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.setting -> {
+                    Toast.makeText(this,
+                        "Setting Click",
+                        Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.logout -> {
+                    Toast.makeText(this,
+                        "Logout Click",
+                        Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                else -> super.onOptionsItemSelected(item)
+            }
+        }
 
         enableEdgeToEdge()
 
